@@ -42,7 +42,7 @@ plot1 <- ggplot(data = movies, aes(x=budget/1000000, y=rating)) +
          theme(axis.title=element_text(size=14,face="bold"), title = element_text(size=18))
 #print(plot1)
 
-plot1_save <- paste(dir, "h1-scatter.png", sep = "/")
+plot1_save <- paste(dir, "hw1-scatter.png", sep = "/")
 ggsave(filename = plot1_save, plot = plot1, dpi = 72)
 
 
@@ -58,7 +58,7 @@ plot2 <- ggplot(data = movies, aes(x=factor(genre), fill = genre)) +
          theme(axis.title=element_text(size=14,face="bold"), title = element_text(size=18))
 #print(plot2)
 
-plot2_save <- paste(dir, "h1-bar.png", sep = "/")
+plot2_save <- paste(dir, "hw1-bar.png", sep = "/")
 ggsave(filename = plot2_save, plot = plot2, dpi = 72)
 
 
@@ -75,7 +75,7 @@ plot3 <- ggplot(data = movies, aes(x=budget/1000000, y=rating, color = factor(ge
          theme(axis.title=element_text(size=14,face="bold"), title = element_text(size=18))
 #print(plot3)
 
-plot3_save <- paste(dir, "h1-multiples.png", sep = "/")
+plot3_save <- paste(dir, "hw1-multiples.png", sep = "/")
 ggsave(filename = plot3_save, plot = plot3, dpi = 72)
 
 #########################
@@ -96,7 +96,7 @@ plot4 <- ggplot(data = eu, aes(x=time)) +
          theme(axis.title=element_text(size=14,face="bold"), title = element_text(size=18))
 #print(plot4)
 
-plot4_save <- paste(dir, "h1-multiline.png", sep = "/")
+plot4_save <- paste(dir, "hw1-multiline.png", sep = "/")
 ggsave(filename = plot4_save, plot = plot4, dpi = 72)
 
 
