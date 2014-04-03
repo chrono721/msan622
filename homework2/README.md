@@ -54,39 +54,30 @@ fluidPage
 	  tabPanel("TABLE")   
 ```
 
-**SUB-SETTING DETAILS**
-```
-radioButtons()
-```
+------------------------------
+**SUB-SETTING DETAILS:**
 The radio buttons controlling the MPAA rating will allow you to see the points that only have that rating. All the other points will disappear. Note that the color of the MPAA rating will stay the same even if the other points disappear.
 
-```
-checkboxGroupInput()
-```
 The check boxes controlling the genre will subset the data based on the genres. If no boxes are selected, all of the data will display. 
 
-**PLOT SETTINGS DETAILS**
-```
-selectInput()
-```
+------------------------------
+**PLOT SETTINGS DETAILS:**
 There is an option to change the color scheme. The default is set to whatever scale_colour_brewer() sets it to. 
 
 There is also an option to change the shape of the points. There are a lot of different shapes, but I have selected a few that could potentially be useful. 
 
 Below are the options for each of the drop downs:
+
 ![IMAGE](DropDown.png)
 
-```
-sliderInput()
-```
 The slider for the Dot Size will control how large the dots will show up. By default, I set this value to 3. 
 
 The slider for the Dot Alpha will control how transparent each dot is. By default, I set this value to 0.5. However, there seems to be an issue where even though I set the value to 0.5, the slider has a margin of error. I do not know why this occurs, but it does not impact the graph significantly. 
 
 The sliders for the X-Axis and Y-Axis control what part of the graph is shown. There might be questions such as "What are the ratings when our budget is between 100 million and 150 million?" These sliders will help to zoom in on the particular section that you would like to look at.
 
-
-**Summary of Data Tab**
+------------------------------
+**Summary of Data Tab:**
 
 Now that we have covered the main page, let's take a look at the other tab.
 
@@ -94,7 +85,7 @@ Now that we have covered the main page, let's take a look at the other tab.
 
 From here, you can take a look at basic statistics based on the data from the Scatterplot. These values WILL CHANGE based on what is displayed on the scatterplot. Because exact values of the data is so hard to see, this tab will make it very easy to summarize the data. 
 
-
+------------------------------
 **EXAMPLE:**
 
 Below, you can find an example of some of the different features of this app.
