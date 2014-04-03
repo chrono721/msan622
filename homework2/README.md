@@ -101,20 +101,19 @@ Below, you can find an example of some of the different features of this app.
 
 ![IMAGE](Example.png)
 
-| **Subsetted**  | |
+| **Subsetted By**  | Action,Drama|
 |----------:|:-------------|
-| **Email** | |
+| **Color Scheme** | Dark2 |
 |----------:|:-------------|
-| **Email** | |
+| **Dot Shape** | Star |
 |----------:|:-------------|
-| **Email** | |
+| **Dot Size** | 5 |
+|----------:|:-------------|
+| **Dot Alpha** | 1.0 |
+|----------:|:-------------|
+| **X-axis Range** | 57 to 149 |
+|----------:|:-------------|
+| **Y-axis Range** | 5 to 7|
 
-This plot has been subsetted by Action and Drama. 
-Color Scheme: Dark2
-Shape of Dot: Star
-Size of Dot: 5
-Alpha of Dot: 1
-X-Axis: 57 to 149
-Y-Axis: 5 to 7
 
  
