@@ -102,17 +102,17 @@ Below, you can find an example of some of the different features of this app.
 ![IMAGE](Example.png)
 
 | **Subsetted By**  | Action,Drama|
-|----------:|:-------------|
+|-|-|
 | **Color Scheme** | Dark2 |
-|----------:|:-------------|
+|-|-|
 | **Dot Shape** | Star |
-|----------:|:-------------|
+|-|-|
 | **Dot Size** | 5 |
-|----------:|:-------------|
+|-|-|
 | **Dot Alpha** | 1.0 |
-|----------:|:-------------|
+|-|-|
 | **X-axis Range** | 57 to 149 |
-|----------:|:-------------|
+|-|-|
 | **Y-axis Range** | 5 to 7|
 
 
