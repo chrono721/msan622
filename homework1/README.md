@@ -53,7 +53,7 @@ print(plot1)
 The following code will produce this plot:
 ![IMAGE](hw1-scatter.png)
 
-For this plot, I simply used geom_point to plot the points directly into the plot. In case there were any NA's left in the dataset that weren't removed, I added the na.rm = TRUE to make sure there were no problems. In addition, I changed the x-axis labels to display in millions of dollars to make the values more clear. I also changed the y-axis labels to display in increments of 1 which is the standard for rating systems.
+For this plot, I simply used geom_point to plot the points directly into the plot. In case there were any NA's left in the dataset that weren't removed, I added the na.rm = TRUE to make sure there were no problems. In addition, I changed the x-axis labels to display in millions of dollars to make the values more clear. I also changed the y-axis labels to display in increments of 1 which is the standard for rating systems. I decided not to add color because the colors made the scatterplot look messy.
 
 This point of this plot is to see if there is a relationship between the movie's budget and its ratings. 
 
