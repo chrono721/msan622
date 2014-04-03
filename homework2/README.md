@@ -101,6 +101,14 @@ Below, you can find an example of some of the different features of this app.
 
 ![IMAGE](Example.png)
 
+| **Subsetted**  | |
+|----------:|:-------------|
+| **Email** | |
+|----------:|:-------------|
+| **Email** | |
+|----------:|:-------------|
+| **Email** | |
+
 This plot has been subsetted by Action and Drama. 
 Color Scheme: Dark2
 Shape of Dot: Star
