@@ -13,15 +13,6 @@ The following packages must be installed prior to running this code:
 - `shiny`
 - `scales`
 
-To run this code, please enter the following commands in R:
-
-```
-library(shiny)
-shiny::runGitHub('msan622', 'chrono721', 'homework2')
-```
-
-This will start the `shiny` app. See below for details on how to interact with the visualization.
-
 ## Main Features##
 
 The `shiny` app created contains the following features:
