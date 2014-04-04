@@ -1,12 +1,6 @@
-
 library(ggplot2)
 library(shiny)
 library(scales)
-
-#TO FIX
-# 4. Add in a table and subpanel
-# 6. Try other visualizations
-# 8. Plot a certain number of points based on a condition
 
 #LOAD DATA
 loadData <- function() {
