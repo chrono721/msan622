@@ -63,7 +63,7 @@ Below are the options for each of the drop downs:
 
 The slider for the Dot Size will control how large the dots will show up. By default, I set this value to 3. 
 
-The slider for the Dot Alpha will control how transparent each dot is. By default, I set this value to 0.5. However, there seems to be an issue where even though I set the value to 0.5, the slider has a margin of error. I do not know why this occurs, but it does not impact the graph significantly. 
+The slider for the Dot Alpha will control how transparent each dot is. By default, I set this value to 0.5. However, there seems to be an issue where even though I set the value to 0.5, the slider has a margin of error. I do not know why this occurs, but it does not impact the graph significantly. I opted to use a continuous slider for this as I believe it gives the user more freedom to set the transparency to his or her liking. If you slide the value all the way to 1, the margin of error causes the value to go above 1. I had to map values over 1 back to 1 in the server.
 
 The sliders for the X-Axis and Y-Axis control what part of the graph is shown. There might be questions such as "What are the ratings when our budget is between 100 million and 150 million?" These sliders will help to zoom in on the particular section that you would like to look at.
 
