@@ -1,15 +1,4 @@
-
 library(shiny)
-
-#setwd("C:/Users/Charles/Desktop")
-#TO CREATE
-#groupMPAA
-#colorScheme
-#groupAction, groupAnimation, ...
-#dotsize
-#dotalpha
-#
-#
 
 shinyUI(
   fluidPage(  
@@ -69,6 +58,4 @@ shinyUI(
     )
   )  
 )
-
-#runApp()
 
