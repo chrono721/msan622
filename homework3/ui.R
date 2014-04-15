@@ -1,7 +1,6 @@
-
 library(shiny)
 
-setwd("C:/Users/Charles/Desktop/")
+#setwd("C:/Users/Charles/Desktop/")
 
 shinyUI(
   fluidPage(
