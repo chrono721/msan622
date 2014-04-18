@@ -10,9 +10,9 @@ Homework 4: Text Visualization
 Instruction for running the official code is down below. I used both python and R. Python was used to retrieve the data and do simple text analytics on the data. The python script produces the csv's required to produce the visualizations from the R code. 
 
 The following Python Librarys should be installed before running the Python code:
--`nltk`
--`sklearn`
--`numpy`
+- `nltk`
+- `sklearn`
+- `numpy`
 
 To run this code, please do the following:
 
@@ -26,8 +26,8 @@ https://raw.github.com/chrono721/msan622/homework4/
 The following  R packages must be installeded before running the R code:
 - `ggplot2`
 - `scales`
--`wordcloud`
--`reshape`
+- `wordcloud`
+- `reshape`
 
 To run this code, please enter the following commands in R. MAKE SURE TO HAVE THE csv FILES BEFORE RUNNING:
 
@@ -36,7 +36,7 @@ library(devtools)
 source_url("https://raw.github.com/chrono721/msan622/homework4/Homework4.R")
 ```
 
-##About the Data##
+## About the Data ##
 
 For this assignment, I decided to take a look at all of the inaugural addresses up until 2003. This information is provided within nltk's package: nltk.corpus.inaugural.
 
@@ -61,7 +61,9 @@ To produce this graph, the count.csv file was used which contained the word coun
 The inaugural speeches all happened every 4 years. Unfortunately, that means the x-axis is labeled rather strangely. I chose to keep it this way because the ticks will actually denote when the speech happened. Also, I chose to plot all words together so that we can see an overall general trend in the data. I facetted the declining words and the increased words because putting them together would create a mess and be hard to see the general trend. 
 
 Lie-Factor: close to 1 - Line plots make it hard to mincontrue the data since it is all in 2D. 
+
 Data-Ink Ratio: LOW - Line plots generally have low data-ink.
+
 Data Density: PRETTY LOW - plotting 3 lines at the same time makes it a little dense.
 
 ![IMAGE](HW4_barplot.png)
@@ -73,7 +75,9 @@ To produce this graph, I conducted a aggregate sum on the POS over the counts. I
 I ended up deleting the legend as the labels are already at the bottom. I also deleted the extra padding from the y-axis and color coded the bars for easier viewing. I debated getting rid of the nouns as it dominates the other bars, but I ultimately decided against it as I didn't know how to incorporate the noun count if it wasn't going to be in the bar chart. Perhaps a log scale would work? 
 
 Lie-Factor: close to 1 - The bar plot starts from 0 and goes to a high number. The data is not miscontrued since this is in 2D.
+
 Data-Ink Ratio: PRETTY LOW - The bars are pretty informative, but can take up a lt of ink.
+
 Data Density: LOW - The bars make it clear to us where the data is and what it represents.
 
 ![IMAGE](HW4_heatmap.png)
@@ -97,7 +101,9 @@ To produce this graph, I needed to convert the counts into a matrix as wordcloud
 I chose this kind of plot because I wanted to color code the words by their respective presidents. A simple word cloud would not give us a lot of information, but using this helps us compare much easier. I should've filtered out some of the single letter words from the dataset, but I don't know how they got into the dataset in the first place. 
 
 Lie-Factor: HIGH-Since the length of the word is not scale, longer words seem to be biggere. This is hard to fix in a word cloud though. 
+
 Data-Ink Ratio: MEDIUM - There are a lot of words here which take up a lot of ink.
+
 Data Density: MEDIUM - Plotting all these words makes everything feel slightly cluttered.
 
 
