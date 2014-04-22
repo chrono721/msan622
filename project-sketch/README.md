@@ -41,19 +41,19 @@ Planned Interactions
 ------------------------------
 
 1. Small Multiples plot 
-- Plan to include choices for color, size, number of words, number of authors to compare
-- I might include the ordering of words, and have you be able to pan between the different alphabetized words.
+> Plan to include choices for color, size, number of words, number of authors to compare
+> I might include the ordering of words, and have you be able to pan between the different alphabetized words.
 
 2.  Word Cloud
-- Plan to let user change number of comparitive words, color, and what exactly you are comparing. 
+> Plan to let user change number of comparitive words, color, and what exactly you are comparing. 
 
 3. Time series lines
-- Plan to include choices for the words, color, range of years
-- Allow one to subset by POS, Authors, etc.
+> Plan to include choices for the words, color, range of years
+> Allow one to subset by POS, Authors, etc.
 
 4. Phrase Net
-- Select what joining word to use
-- Select color, and the weight of the connecting lines. 
+> Select what joining word to use
+> Select color, and the weight of the connecting lines. 
 
 
 Planned Interface:
