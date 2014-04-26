@@ -6,7 +6,14 @@ require("reshape")
 ######LOAD DATA######
 loadData <- function() {
   
-  Seat_df <- data.frame(time = as.Date(c(time(Seatbelts)), origin = "1970-01-01"),
+  dates <- character(0)
+  for (year in 1969:1984){
+    for (mon in 1:12){
+      dates <- c(dates, paste(year,"-", mon,"-", 1, sep=""))
+    }
+  }
+  
+  Seat_df <- data.frame(time = as.Date(dates),
                         DriversKilled = c(Seatbelts[1:192]), 
                         drivers = c(Seatbelts[(192*1+1):(192*2)]),
                         front =c(Seatbelts[(192*2+1):(192*3)]),
@@ -28,8 +35,8 @@ getLinePlot <- function(localFrame, XzoomStart, XzoomEnd, law, petrolSlide){
   date <- as.numeric(as.Date(XzoomEnd) - as.Date(XzoomStart))
   text <- ""
   if(date <= 0 ){
-    XzoomStart <- "1975-05-24"
-    XzoomEnd <- "1975-06-08"
+    XzoomStart <- "1969-01-01"
+    XzoomEnd <- "1984-12-01"
     text <- "Invalid dates Selected, Reverting to default dates."
   }
   
@@ -42,11 +49,11 @@ getLinePlot <- function(localFrame, XzoomStart, XzoomEnd, law, petrolSlide){
     plt1 <- plt1 + geom_vline(xintercept = as.numeric(Seat_df$time[170]), color = "Red", size = 1.2)
   }
   plt1 <- plt1 + ggtitle("Total Kilometers Driven in 1975")
-  plt1 <- plt1 + xlab("Time (1975)") +  ylab("Kilometers")
+  plt1 <- plt1 + xlab("Time (Years)") +  ylab("Kilometers")
   plt1 <- plt1 + guides(color=FALSE, size=FALSE)
   plt1 <- plt1 + theme(axis.title=element_text(size=12,face="bold"), title = element_text(size=18))
   plt1 <- plt1 + scale_x_date(limits = c(as.Date(XzoomStart), as.Date(XzoomEnd)), 
-                              breaks = date_breaks("2 days"), labels = date_format("%d-%b"), expand = c(0,0))
+                              breaks = date_breaks("1 year"), labels = date_format("%Y"), expand = c(0,0))
   plt1 <- plt1 + annotate("text", x=(as.Date(XzoomStart)+5), y=5, label=text)  
   return(plt1)
 }
@@ -80,7 +87,7 @@ getStackedArea <- function(localFrame, XzoomStart, XzoomEnd, law, areaType){
     plt2 <- ggplot(Seat_melt, aes(x=time, y=value, group=variable, fill=variable))
     plt2 <- plt2 + geom_area(position="stack")
     plt2 <- plt2 + ggtitle("Number of Car Injuries/Deaths in the UK")
-    plt2 <- plt2 + xlab("Time (1975)") +  ylab("Death/Serious Injury Counts")
+    plt2 <- plt2 + xlab("Time (Years)") +  ylab("Death/Serious Injury Counts")
     plt2 <- plt2 + scale_y_continuous(limits = c(0,5000), expand = c(0,0))
     plt2 <- plt2 + annotate("text", x=(as.Date(XzoomStart)+5), y=500, label=text)
   }
@@ -88,7 +95,7 @@ getStackedArea <- function(localFrame, XzoomStart, XzoomEnd, law, areaType){
     plt2 <- ggplot(Seat_melt_P, aes(x=time, y=value, group=variable, fill=variable))
     plt2 <- plt2 + geom_area(position="stack")
     plt2 <- plt2 + ggtitle("Percent of Car Injuries/Deaths in the UK")
-    plt2 <- plt2 + xlab("Time (1975)") +  ylab("Death/Serious Injury")
+    plt2 <- plt2 + xlab("Time (Years)") +  ylab("Death/Serious Injury")
     plt2 <- plt2 + ylim(0,1)
     plt2 <- plt2 + scale_y_continuous(breaks=seq(0,1,0.1), labels=percent, expand = c(0,0))
     plt2 <- plt2 + annotate("text", x=(as.Date(XzoomStart)+5), y=0.1, label=text)
@@ -99,7 +106,7 @@ getStackedArea <- function(localFrame, XzoomStart, XzoomEnd, law, areaType){
   }
   
   plt2 <- plt2 + scale_x_date(limits = c(as.Date(XzoomStart), as.Date(XzoomEnd)), 
-                              breaks = date_breaks("2 days"), labels = date_format("%d-%b"), expand = c(0,0))
+                              breaks = date_breaks("1 year"), labels = date_format("%Y"), expand = c(0,0))
   plt2 <- plt2 + labs(fill = "Victim Location")
   plt2 <- plt2 + theme(axis.title=element_text(size=12,face="bold"), 
                        title = element_text(size=18),
@@ -152,9 +159,9 @@ getHeatMap <- function(localFrame, XzoomStart, XzoomEnd, law, colorScheme, heatT
   }
   
   plt3 <- plt3 + ggtitle("Percent of Car Injuries/Death (UK)")
-  plt3 <- plt3 + xlab("Time (1975)") +  ylab("Location of Death in Car")
+  plt3 <- plt3 + xlab("Time (Years)") +  ylab("Location of Death in Car")
   plt3 <- plt3 + labs(fill = "Percent")
-  plt3 <- plt3 + scale_x_date(limits = c(as.Date(XzoomStart), as.Date(XzoomEnd)-1),expand = c(0,0))
+  plt3 <- plt3 + scale_x_date(limits = c(as.Date(XzoomStart), as.Date(XzoomEnd)-1),expand = c(0,0), labels = date_format("%Y"))
   plt3 <- plt3 + scale_fill_gradientn(colours = palette, values = colorval, breaks = seq(0.003, 0.008, 0.001), labels = paste(seq(0.3, 0.8, 0.1), "%"))
   plt3 <- plt3 + scale_y_discrete(expand = c(0,0))
   plt3 <- plt3 + theme(axis.title=element_text(size=12,face="bold"), title = element_text(size=18))

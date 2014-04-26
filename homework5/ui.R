@@ -7,9 +7,9 @@ shinyUI(
   fluidPage(
     titlePanel("UK Driver Data"),
     sidebarPanel(width = 3, 
-                 dateInput("XzoomStart", "Start Date", value = "1975-05-24", format = "M-d-yyyy", min = "1975-05-24", max = "1975-06-08"),
-                 dateInput("XzoomEnd", "End Date", value = "1975-06-08", format = "M-d-yyyy", min = "1975-05-24", max = "1975-06-08"),
-                 checkboxInput("law", label = "Law Enacted", value = TRUE)
+                 dateInput("XzoomStart", "Start Date", value = "1969-01-01", format = "M-yyyy", min = "1969-01-01", max = "1984-12-01", startview = "month"),
+                 dateInput("XzoomEnd", "End Date", value = "1984-12-01", format = "M-yyyy", min = "1969-01-01", max = "1984-12-01", startview = "month"),
+                 checkboxInput("law", label = "Law Enacted (Jan-1983)", value = TRUE)
                  ),
     mainPanel(width = 9,
       tabsetPanel(
