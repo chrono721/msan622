@@ -21,6 +21,7 @@ Also, please have the following libraries installed to run the code:
 - `shiny`
 - `scales`
 - `datasets`
+- `reshape`
 
 ## About the Data ##
 
