@@ -11,7 +11,7 @@ My `shiny` app should be able to run remotely using the following code:
 
 ```
 library(shiny)
-runGitHub("msan622", "chrono721", subdir = "homework3")
+runGitHub("msan622", "chrono721", subdir = "homework5")
 ```
 
 Also, please have the following libraries installed to run the code:
