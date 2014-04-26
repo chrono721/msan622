@@ -1,4 +1,3 @@
-
 library(shiny)
 library(ggplot2)
 library(scales)
@@ -6,7 +5,7 @@ library(scales)
 ######LOAD DATA######
 loadData <- function() {
   
-  Seat_df <- data.frame(time = as.Date(c(time(Seatbelts))),
+  Seat_df <- data.frame(time = as.Date(c(time(Seatbelts)), origin = "1970-01-01"),
                         DriversKilled = c(Seatbelts[1:192]), 
                         drivers = c(Seatbelts[(192*1+1):(192*2)]),
                         front =c(Seatbelts[(192*2+1):(192*3)]),
