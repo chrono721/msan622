@@ -12,7 +12,7 @@ To run the prototype shiny app, you can run the following:
 
 ```
 library(shiny)
-runGitHub("msan622", "chrono721", subdir = "prototype")
+runGitHub("msan622", "chrono721", subdir = "project-prototype")
 ```
 
 If you would like to run the R program to produce the example plots, I would highly suggest that you copy the code up until the part where it says "Not Done" into your own R. You will be able to see the start of the other plots as well. Please note that you must download all the .csv files as well.
