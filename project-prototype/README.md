@@ -32,13 +32,13 @@ The dataset I chose to visualize is the raw text file containing the entire corp
 
 The raw dataset needs to be transformed into other forms before I can visualize it. I currently have:
 
--basic.csv: Contains the basic information about each paper (the author and when it was written)
--counts.csv: Contains the counts of each word in each paper. I removed stop words and only included counts of words of at least 5.
--POS.csv: Contains the part of speech for each of the words.
+- basic.csv: Contains the basic information about each paper (the author and when it was written)
+- counts.csv: Contains the counts of each word in each paper. I removed stop words and only included counts of words of at least 5.
+- POS.csv: Contains the part of speech for each of the words.
 
 Eventually, I will also need to produce these datasets as well:
--tfidf.csv: Will contain the tfidf for each word and document
--network.csv: Will contain the counts of tri-grams that contain a "connecting" word like 'of', 'and', etc.
+- tfidf.csv: Will contain the tfidf for each word and document
+- network.csv: Will contain the counts of tri-grams that contain a "connecting" word like 'of', 'and', etc.
 
 
 Prototype
