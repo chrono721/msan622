@@ -54,6 +54,9 @@ This is a small multiples plot of the word counts in each Federalist paper. The 
 
 This is a comparison wordcloud that displays the word frequencies used by the authors. It is a little hard to get around the lie factor here, but the point of this plot is to showcase the different vocabulary used by each of the authors. I may also decide to include stop words here too since according to studies, they are also a pretty differentiating factor between the authors. 
 
+![IMAGE](DV_lines.png)
+
+This is a line multiples plot that displays the trends of an Author's writing history over time. In this case, the above plot displays the Federalist writings of HAMILTON. The data has been designed to show either an increase or a decrease in usage over time. I have plans to facet the plot by authors, but I realize this would make the plots look weird in general since the authors wrote separate books at separate times which would make it hard to compare. 
 
 ![IMAGE](Shiny.png)
 
