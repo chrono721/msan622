@@ -133,4 +133,8 @@ Below are a list of challenges that I faced while setting all of this up:
 - Inserting tables into the ggplots: Inserting a simple table into the graph proved to be very difficult as well. Searching online, there is no easy way to do this, and I ended up having to draw the table and legend separately and inserting it back into the ggplot.
 - Creating all of the datasets: The most trouble I had was figuring out a good way to create the phrase nets. I wanted to include a lot of optional choices, but for each choice, I needed to create a separate adjacency matrix for each one. Creating these datasets were pretty difficult and takes a while to actually load into R. However, I don't know a better way to do this except to reduce the adjacency matrix. 
 
+If I had more time, I would've liked to include a navigation bar as suggested by a prototype reviewer. However, I had a hard time thinking of how this could be used effectively that a tabset panel couldn't achieve. 
 
+In addition, I would've liked to include previous research that I have done on the papers and includ a predictive model that I had created. However, visualizing this would be very difficult, and would require a lot of time to figure things out. 
+
+I also would've liked to add color selection this this as well. However, the default colors do a decent job at telling the story of the data. More options still would've been nice to put in. 
